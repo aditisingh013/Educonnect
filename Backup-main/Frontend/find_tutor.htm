@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Tutor | EduConnect</title>
+    <link rel="stylesheet" href="abc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar Menu -->
+  <div class="menu-icon" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+</div>
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+    <span class="green">Edu</span><span class="yellow">Connect</span>
+  </div>
+        <button class="close-sidebar" id="close-sidebar">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <a href="home.html"><i class="fas fa-home"></i><span> Home</span></a>
+    <a href="find_tutor.htm"><i class="fas fa-book"></i><span> Find Tutor</span></a>
+    <a href="docUpload.html" class="active"><i class="fas fa-upload"></i><span> Upload Document</span></a>
+    <a href="notification.html"><i class="fas fa-bell"></i><span> Notifications</span></a>
+    <a href="profile.html"><i class="fas fa-user"></i><span> Profile</span></a>
+    <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+    <a href="learderboard.html"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+    <a href="Loginpage.html" class="logout"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+</div>
+<header>
+    <div class="logo">
+        <span class="green">Edu</span><span class="yellow">Connect</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="find_tutor.htm">Find Tutors</a></li>
+            <li><a href="docUpload.html">Document</a></li>
+            <li><a href="msg.html">Contact</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="learderboard.html">Leaderboard</a></li>
+        </ul>
+    </nav>
+    <div class="auth-buttons">
+        <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+        <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+    </div>
+</header>
+
+<div class="container">
+  <div class="left">
+      <div class="search">
+          <input placeholder="Search by school/college/company" id="search-institution">
+          <button id="search-institution-btn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="filter">
+          <label>Price:</label>
+          <input type="number" id="min-price" placeholder="Min ₹"> - 
+          <input type="number" id="max-price" placeholder="Max ₹">
+      </div>
+      
+      <div class="filter">
+          <label>Education:</label>
+          <div class="checkbox-group">
+              <label class="edu-checkbox-label">
+                  <input type="checkbox" name="education" value="Under Graduate"> Under Graduate
+              </label>
+              <label class="edu-checkbox-label">
+                  <input type="checkbox" name="education" value="Post Graduate"> Post Graduate
+              </label>
+              <label class="edu-checkbox-label">
+                  <input type="checkbox" name="education" value="High School"> High School
+              </label>
+          </div>
+      </div>
+      
+      <div class="filter">
+          <label>Experience:</label>
+          <div class="checkbox-group">
+              <label class="exp-checkbox-label">
+                  <input type="checkbox" name="experience" value="Beginner"> Beginner
+              </label>
+              <label class="exp-checkbox-label">
+                  <input type="checkbox" name="experience" value="Intermediate"> Intermediate
+              </label>
+              <label class="exp-checkbox-label">
+                  <input type="checkbox" name="experience" value="Advanced"> Advanced
+              </label>
+          </div>
+      </div>
+      
+      <div class="filter">
+          <label>Rating:</label>
+          <select id="rating-filter">
+              <option value="">Any</option>
+              <option value="1">1 star & up</option>
+              <option value="2">2 star & up</option>
+              <option value="3">3 star & up</option>
+              <option value="4">4 star & up</option>
+          </select>
+      </div>
+      
+      <div class="filter">
+          <label>Subject:</label>
+          <input type="text" id="subject-filter" placeholder="e.g. Math">
+      </div>      
+  
+      <button id="apply-filters-btn" class="primary-button">Apply Filters</button>
+      <button type="reset" id="reset-filters-btn" class="primary-button">Reset</button>
+  </div>
+
+    <!-- Right Content -->
+    <div class="right">
+      <div class="search">
+        <input placeholder="search by name" id="search-name-input">
+        <button id="search-name-btn">Search</button>
+      </div>
+
+      <table id="tutor-table">     
+        <tbody id="tutor-body">
+          <!-- Tutor rows will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+  <script src="./home.js"></script>
+</body>
+</html>

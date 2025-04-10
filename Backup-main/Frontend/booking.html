@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | EduConnect</title>
+    <link rel="stylesheet" href="abc.css">
+    <script defer src="home.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+     
+    <div class="menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+        <span class="green">Edu</span><span class="yellow">Connect</span>
+      </div>
+            <button class="close-sidebar" id="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <a href="home.html"><i class="fas fa-home"></i><span> Home</span></a>
+        <a href="find_tutor.htm"><i class="fas fa-book"></i><span> Find Tutor</span></a>
+        <a href="docUpload.html" class="active"><i class="fas fa-upload"></i><span> Upload Document</span></a>
+        <a href="notification.html"><i class="fas fa-bell"></i><span> Notifications</span></a>
+        <a href="profile.html"><i class="fas fa-user"></i><span> Profile</span></a>
+        <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+        <a href="leaderboard.html"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+        <a href="Loginpage.html" class="logout"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+    </div>
+
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Connect</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="find_tutor.htm">Find Tutors</a></li>
+                <li><a href="docUpload.html">Document</a></li>
+                <li><a href="msg.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="learderboard.html">Leaderboard</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+            <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+        </div>
+    </header>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form">
+        <div class="form-container">
+            <h1>Book Your Session</h1>
+            <form id="booking-form" onsubmit="handleBooking(event)">
+                <div class="form-group">
+                    <label for="user-id">User ID</label>
+                    <input type="text" id="user-id" name="user-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Select Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose a subject</option>
+                        <option value="calculus">Calculus</option>
+                        <option value="linear-algebra">Linear Algebra</option>
+                        <option value="differential-equations">Differential Equations</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Select Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Select Time</label>
+                    <select id="time" name="time" required>
+                        <option value="">Choose a time slot</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Session Duration</label>
+                    <select id="duration" name="duration" required>
+                        <option value="1">1 hour</option>
+                        <option value="2">2 hours</option>
+                        <option value="3">3 hours</option>
+                    </select>
+                </div>
+                <div class="payment-section">
+                    <h3>Payment Details</h3>
+                    <div class="price-display">
+                        <p>Rate: Rs.<span id="rate">50</span>/hour</p>
+                        <p>Total: Rs.<span id="total">50</span></p>
+                    </div>
+                    <button type="button" class="pay-now" onclick="initiatePayment()">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Payment Status Modal -->
+    <div class="payment-modal" id="payment-modal">
+        <div class="modal-content">
+            <h2>Processing Payment</h2>
+            <div class="payment-status">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Please wait while we process your payment...</p>
+            </div>
+        </div>
+    </div>
+
+
+  
+</body>
+</html> 

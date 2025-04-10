@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect Contact Page</title>
+    <link rel="stylesheet" href="abc.css">
+    <script defer src="msg.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+        <!-- Sidebar Menu Icon -->
+        <div class="menu-icon" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="green">Edu</span><span class="yellow">Connect</span>
+                </div>
+                <button class="close-sidebar" id="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <a href="home.html"><i class="fas fa-home"></i><span> Home</span></a>
+            <a href="find_tutor.htm" class="active"><i class="fas fa-book"></i><span> Find Tutor</span></a>
+            <a href="docUpload.html"><i class="fas fa-upload"></i><span> Upload Document</span></a>
+            <a href="notification.html"><i class="fas fa-bell"></i><span> Notifications</span></a>
+            <a href="profile.html"><i class="fas fa-user"></i><span> Profile</span></a>
+            <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+            <a href="leaderboard.html"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+            <a href="Loginpage.html" class="logout"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+        </div>
+        <header>
+            <div class="logo">
+                <span class="green">Edu</span><span class="yellow">Connect</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="find_tutor.htm">Find Tutors</a></li>
+                    <li><a href="docUpload.html">Document</a></li>
+                    <li><a href="msg.html">Contact</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="learderboard.html">Leaderboard</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+                <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+            </div>
+        </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-container">
+            <div class="image-container">
+                <img src="email.jpg" alt="Customer Support Illustration">
+            </div>
+            
+            <div class="contact-form">
+                <h2>Message Us</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect | Learn Online</title>
+    <link rel="stylesheet" href="abc.css">
+    <script defer src="home.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Menu Icon -->
+    !<!--<div class="menu-icon">☰</div>-->
+
+    <!-- Sidebar -->
+    <div class="menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+        <span class="green">Edu</span><span class="yellow">Connect</span>
+      </div>
+            <button class="close-sidebar" id="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <a href="home.html"><i class="fas fa-home"></i><span> Home</span></a>
+        <a href="find_tutor.htm"><i class="fas fa-book"></i><span> Find Tutor</span></a>
+        <a href="docUpload.html" class="active"><i class="fas fa-upload"></i><span> Upload Document</span></a>
+        <a href="notification.html"><i class="fas fa-bell"></i><span> Notifications</span></a>
+        <a href="profile.html"><i class="fas fa-user"></i><span> Profile</span></a>
+        <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+        <a href="leaderboard.html"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+        <a href="Loginpage.html" class="logout"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Connect</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="find_tutor.htm">Find Tutors</a></li>
+                <li><a href="docUpload.html">Document</a></li>
+                <li><a href="msg.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="learderboard.html">Leaderboard</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+            <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Unlock <span class="highlight">Top-Tier</span> Learning <br>Guided by <span class="highlight">Expert</span> Minds</h1> <p>Elevate your skills with exceptional online courses taught by leading professionals.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="What do you want to learn?">
+                <a href="find_tutor.htm">
+                  <button type="button" class="search-btn"><i class="fas fa-search"></i></button>
+                </a>
+              </div>
+              
+              
+        </div>
+        <div class="hero-image">
+            <img src="b.jpg" alt="Learning Illustration">
+        </div>
+    </section>
+
+    <!-- Popular Courses -->
+    <section class="courses">
+        <h2>Most <span class="highlight">Popular</span> Courses</h2>
+        <div class="course-carousel">
+            <div class="course-card">
+                <img src="home.jpg" alt="English">
+                <h3>English</h3>
+                <p>By Anjali Sharma</p>
+                <p class="price">₹499</p>
+            </div>
+            <div class="course-card">
+                <img src="home.jpg" alt="Computer Architecture">
+                <h3>Computer Architecture</h3>
+                <p>By Rajesh Kumar</p>
+                <p class="price">₹599</p>
+            </div>
+            <div class="course-card">
+                <img src="home.jpg" alt="C++">
+                <h3>C++</h3>
+                <p>By Priya Singh</p>
+                <p class="price">₹399</p>
+            </div>
+            <div class="course-card">
+                <img src="home.jpg" alt="Python">
+                <h3>Python</h3>
+                <p>By Amit Patel</p>
+                <p class="price">₹450</p>
+            </div>
+            <div class="course-card">
+                <img src="home.jpg" alt="Java">
+                <h3>Java</h3>
+                <p>By Neha Verma</p>
+                <p class="price">₹550</p>
+            </div>
+        </div>
+    </section>
+    <!-- Popular Categories Section -->
+<section class="categories">
+    <h2>Most <span class="highlight">Popular</span> Categories</h2>
+    <p>Various versions have evolved over the years, sometimes by accident.</p>
+    <div class="category-grid">
+        <div class="category-card">English</div>
+        <div class="category-card">Computer Architecture</div>
+        <div class="category-card">C++</div>
+        <div class="category-card">Python</div>
+        <div class="category-card">Java</div>
+        <div class="category-card">Mechanics</div>
+        <div class="category-card">Electric Circuits</div>
+        <div class="category-card">Linear Algebra</div>
+        <div class="category-card">Economics</div>
+        <div class="category-card">Accounting</div>
+        <div class="category-card">French</div>
+        <div class="category-card">German</div>
+        <div class="category-card">Punjabi</div>
+        <div class="category-card">Statistics</div>
+        <div class="category-card">Organic Chemistry</div>
+        <div class="category-card">Physical Chemistry</div>
+        <div class="category-card">Inorganic Chemistry</div>
+    </div>
+</section>
+
+    <!-- About Us Section -->
+    <section class="about-us" style="background-color: #f0f8ff; padding: 60px 20px; text-align: center;">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Welcome to EduConnect, your gateway to a world of knowledge and learning. We are dedicated to providing top-notch educational resources and courses to help you achieve your academic and professional goals. Our platform connects you with expert instructors and a vibrant community of learners.</p>
+                <blockquote style="font-style: italic; color: #555; margin: 20px 0;">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</blockquote>
+                <p>Join us on this journey to unlock your potential and explore new horizons. Whether you're looking to enhance your skills, learn something new, or advance your career, EduConnect is here to support you every step of the way.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- FAQs Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">What courses are available?</div>
+                <div class="faq-answer">We offer courses in Web Development, DBMS, C++, economics, C++, and more.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How can I enroll in a course?</div>
+                <div class="faq-answer">Simply click on a course and follow the enrollment process.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Are the courses free?</div>
+                <div class="faq-answer">Some courses are free, while others require payment.</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+ 
+
+</body>
+</html>

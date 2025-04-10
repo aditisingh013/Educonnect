@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Profile | EduCrew</title>
+    <link rel="stylesheet" href="abc.css">
+    
+    <script defer src="tutor_desc.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="green">Edu</span><span class="yellow">Crew</span>
+            </div>
+            <button class="close-sidebar" id="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <a href="profile.html"><i class="fas fa-user"></i><span> Profile</span></a>
+        <a href="#"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+        <a href="#"><i class="fas fa-bell"></i><span> Notifications</span></a>
+        <a href="#"><i class="fas fa-upload"></i><span> Upload Documents</span></a>
+        <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+        <a href="Loginpage.html"><i class="fas fa-sign-out-alt"></i><span> Log Out</span></a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Crew</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tutor.html" class="active">Find Tutor</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="msg.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+            <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+        </div>
+    </header>
+
+
+    <!-- Tutor Profile Section -->
+    <section class="tutor-profile">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="b.jpg" alt="Tutor Profile">
+                </div>
+                <div class="profile-info">
+                    <h1 id="tutor-name"></h1>
+                    <p class="tutor-title" id="tutor-email"></p>
+                    <p class="tutor-id" id="tutor-id" style="display: none;"></p>
+                    <div class="ctutor-rating" id="tutor-rating">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="profile-description">
+                <h2>About Me</h2>
+                <p class="tutor-bio" id="tutor-bio"></p>
+                
+                <div class="education-section">
+                    <h3>Education</h3>
+                    <ul id="education-list">
+                    </ul>
+                </div>
+                
+                </div>
+
+                <div class="resume-section">
+                    <h3>Resume</h3>
+                    <a href="#" id="resume-link" class="resume-link" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects and Pricing Section -->
+    <div class="subjects-grid" id="subjects-container">
+        <!-- Subjects will be dynamically inserted here -->
+    </div>
+    
+    <div class="action-buttons">
+        <button class="book-now" onclick="window.location.href='booking.html'">Book Now</button>
+        <button class="message-tutor" onclick="document.getElementById('message-form').style.display='block'">Message Tutor</button>
+    </div>
+</section>
+
+<!-- Message Form Section -->
+<section class="message-form" id="message-form">
+    <div class="form-container">
+        <h2>Send Message to Tutor</h2>
+        <form id="contact-form" onsubmit="sendMessage(event)">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="send-message">Send Message</button>
+                <button type="button" class="cancel-message" onclick="document.getElementById('message-form').style.display='none'">Cancel</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviews">
+    <h2>Student Reviews</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <div class="review-header">
+                <img src="b.jpg" alt="Student">
+                <div class="review-info">
+                    <h3>Sarah Johnson</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p>"John is an amazing teacher! He made calculus so much easier to understand. His explanations are clear and he's always patient with questions."</p>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <img src="b.jpg" alt="Student">
+                <div class="review-info">
+                    <h3>Michael Chen</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <p>"The best math tutor I've ever had. His teaching methods are innovative and he really cares about his students' success."</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

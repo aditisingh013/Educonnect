@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tutorProfileApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Profile | EduConnect</title>
+    <link rel="stylesheet" href="abc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script defer src="home.js"></script>
+</head>
+<body ng-controller="TutorProfileController">
+   <!-- Sidebar Menu -->
+   <div class="menu-icon" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+</div>
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Connect</span>
+        </div>
+        <button class="close-sidebar" id="close-sidebar">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <a href="home.html"><i class="fas fa-home"></i><span> Home</span></a>
+    <a href="find_tutor.htm"><i class="fas fa-book"></i><span> Find Tutor</span></a>
+    <a href="docUpload.html"><i class="fas fa-upload"></i><span> Upload Document</span></a>
+    <a href="notification.html"><i class="fas fa-bell"></i><span> Notifications</span></a>
+    <a href="profile.html"><i class="fas fa-user"></i><span> Profile</span></a>
+    <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+    <a href="leaderboard.html" class="active"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+    <a href="Loginpage.html" class="logout"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+</div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Connect</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tutor.html">Find Tutor</a></li>
+                <li><a href="#">Documents</a></li>
+                <li><a href="msg.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+            <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+        </div>
+    </header>
+
+    <div class="tutor-container">
+        <!-- Profile Sidebar -->
+        <div class="tutor-profile-sidebar">
+            <img src="email.jpg" alt="Tutor Profile">
+            <h2>Hello, I'm <span class="highlight">{{profile.name}}</span></h2>
+            <p>{{sidebar.text}}</p>
+            <div class="tutor-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>({{profile.rating}})</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-section">
+            <h1 class="tutor-title">Tutor Profile</h1>
+            <p class="subtitle">{{profile.specialization}}</p>
+
+            <div class="details">
+                <h2>Details</h2>
+                <p><strong>Tutor ID:</strong> {{profile.tutorId}}</p>
+                <p><strong>Name:</strong> {{profile.name}}</p>
+                <p><strong>Education:</strong> {{profile.education}}</p>
+                <p><strong>Resume:</strong> <a href="{{profile.resume}}" target="_blank" class="tutor-resume-link">View Resume</a></p>
+            </div>
+
+            <div class="subjects">
+                <h2>Subjects</h2>
+                <div class="subject-tags">
+                    <span class="subject-tag" ng-repeat="subject in profile.subjects">{{subject}}</span>
+                </div>
+            </div>
+
+            <div class="about-me">
+                <h2>Bio</h2>
+                <p>{{profile.about}}</p>
+            </div>
+
+            <div class="schedule">
+                <h2>Available Hours</h2>
+                <p>{{profile.availability}}</p>
+            </div>
+
+            <div class="pricing">
+                <h2>Pricing</h2>
+                <p><strong>Hourly Rate:</strong> Rs{{profile.hourlyRate}}/hour</p>
+            </div>
+
+            <!-- History Section -->
+            <div class="history">
+                <h2>Teaching History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject Taught</th>
+                            <th>Student Name</th>
+                            <th>User ID</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="history in profile.history">
+                            <td>{{history.subject}}</td>
+                            <td>{{history.studentName}}</td>
+                            <td>{{history.userId}}</td>
+                            <td>{{history.date}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="tutor_profile.js"></script>
+    
+</body>
+</html> 

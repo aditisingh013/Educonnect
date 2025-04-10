@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Registration | EduCrew</title>
+    <link rel="stylesheet" href="tutor.css">
+    <script defer src="tutor.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Menu -->
+    <div class="menu-icon" id="menu-toggle">☰</div>
+    <div class="sidebar" id="sidebar">
+        <a href="#"><i class="fas fa-home"></i><span> Home</span></a>
+        <a href="#"><i class="fas fa-book"></i><span> Courses</span></a>
+        <a href="#"><i class="fas fa-users"></i><span> Community</span></a>
+        <a href="#"><i class="fas fa-bell"></i><span> Notifications</span></a>
+        <a href="#"><i class="fas fa-user"></i><span> Profile</span></a>
+        <a href="#"><i class="fas fa-cog"></i><span> Settings</span></a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Crew</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login">Login</button>
+            <button class="signup">Sign up for Free</button>
+        </div>
+    </header>
+
+    <!-- Tutor Registration Form -->
+    <section class="registration-container">
+        <div class="form-box">
+            <h2>Tutor Registration</h2>
+
+            <form id="tutor-form">
+                <div class="form-group">
+                    <div>
+                        <label>First Name</label>
+                        <input type="text" id="first-name" placeholder="Enter first name" required>
+                    </div>
+                    <div>
+                        <label>Last Name</label>
+                        <input type="text" id="last-name" placeholder="Enter last name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label>Birthday</label>
+                        <input type="date" id="birthday" required>
+                    </div>
+                    <div class="gender-group">
+                        <label>Gender</label>
+                        <div class="gender-options">
+                            <label><input type="radio" name="gender" value="Male" required> Male</label>
+                            <label><input type="radio" name="gender" value="Female" required> Female</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Enter email" required>
+                    </div>
+                    <div>
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label>Subject Expertise</label>
+                        <select id="subject" required>
+                            <option value="" disabled selected>Choose option</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Database Management">Database Management</option>
+                            <option value="Calculus">Calculus</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="French">French</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group file-upload">
+                    <label>Upload Resume (PDF)</label>
+                    <input type="file" id="resume" accept=".pdf" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

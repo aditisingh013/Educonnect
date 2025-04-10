@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Registration | EduConnect</title>
+    <link rel="stylesheet" href="tutor_detail.css">
+    <script defer src="tutor_detail.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Connect</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="find_tutor.htm">Find Tutors</a></li>
+                <li><a href="docUpload.html">Document</a></li>
+                <li><a href="msg.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="learderboard.html">Leaderboard</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+            <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+        </div>
+    </header>
+
+    <!-- Tutor Registration Form -->
+    <section class="tutor-registration">
+        <div class="form-container">
+            <h1>Become a Tutor</h1>
+            <form id="tutor-form" enctype="multipart/form-data" method="POST" action="/auth/registerTutor">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h2>Personal Information</h2>
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" required>
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Tell us about yourself</label>
+                        <textarea id="bio" name="bio" rows="5"></textarea>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Education Details -->
+                <div class="form-section">
+                    <h2>Education Details</h2>
+                    <div class="form-group">
+                        <label for="highest-qualification">Qualification</label>
+                        <select id="highest-qualification" name="highest-qualification" required>
+                            <option value="">Select Qualification</option>
+                            <option value="High School">High School</option>
+                            <option value="Under Graduate">Under Graduate</option>
+                            <option value="Post Graduate">Post Graduate</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group" id="school-name-group">
+                        <label for="school-name">School Name </label>
+                        <input type="text" id="school-name" name="school-name" required>
+                    </div>
+                    <div class="form-group" id="college-name-group">
+                        <label for="college-name">College Name</label>
+                        <input type="text" id="college-name" name="college-name">
+                    </div>
+                
+                    <div class="form-group" id="workplace-group">
+                        <label for="workplace">Workplace</label>
+                        <input type="text" id="workplace" name="workplace">
+                    </div>
+                </div>
+                
+
+                <!-- Teaching Subjects -->
+                <div class="form-section">
+                    <h2>Teaching Subjects</h2>
+                    <div class="subjects-container">
+                        <div class="subject-entry">
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subjects[]" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="skill">Skill Level</label>
+                            <select id="skill" name="skill[]" required>
+                            <option value="">Select Qualification</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="language_medium">Language</label>
+                                <input type="text" id="language_medium" name="language_medium[]" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rate">Hourly Rate</label>
+                                <input type="number" id="rate" name="rate[]" min="0" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-subject" onclick="addSubjectEntry()">
+                        <i class="fas fa-plus"></i> Add Another Subject
+                    </button>
+                </div>
+
+                <!--Availability Slots-->
+                <div class="form-section">
+                    <h2>Availability Slot</h2>
+                    <div class="availability-container">
+                        <div class="availability-entry">
+                            <div class="form-section">
+                                <h2>Availability</h2>
+                              
+                                <div class="form-group">
+                                  <label for="from-day">Available From (Day)</label>
+                                  <select id="from-day" name="from_day" required>
+                                    <option value="">Select Start Day</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+                                  </select>
+                                </div>
+                              
+                                <div class="form-group">
+                                  <label for="to-day">Available To (Day)</label>
+                                  <select id="to-day" name="to_day" required>
+                                    <option value="">Select End Day</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+                                  </select>
+                                </div>
+                              
+                                <div class="form-group">
+                                  <label for="start-time">Start Time</label>
+                                  <input type="time" id="start-time" name="start_time" required>
+                                </div>
+                              
+                                <div class="form-group">
+                                  <label for="end-time">End Time</label>
+                                  <input type="time" id="end-time" name="end_time" required>
+                                </div>
+                              </div>                              
+                        </div>
+                    </div>
+
+                <!-- Resume Upload -->
+                <div class="form-section">
+                    <h2>Resume</h2>
+                    <div class="form-group">
+                        <label for="resume">Upload Resume (PDF)</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf" required>
+                    </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-section terms">
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the Terms and Conditions and Privacy Policy</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+
+</body>
+</html>

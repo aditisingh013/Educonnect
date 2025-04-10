@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile | EduConnect</title>
+    <link rel="stylesheet" href="abc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="home.js"></script>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="green">Edu</span><span class="yellow">Connect</span>
+            </div>
+            <button class="close-sidebar" id="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <!-- Updated profile link with id -->
+        <a href="#" id="profileBtn" class="active"><i class="fas fa-user"></i><span> Profile</span></a>
+        <a href="#"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+        <a href="#"><i class="fas fa-bell"></i><span> Notifications</span></a>
+        <a href="#"><i class="fas fa-upload"></i><span> Upload Documents</span></a>
+        <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+        <a href="Loginpage.html"><i class="fas fa-sign-out-alt"></i><span> Log Out</span></a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Connect</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="find_tutor.htm">Find Tutors</a></li>
+                <li><a href="docUpload.html">Document</a></li>
+                <li><a href="msg.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="learderboard.html">Leaderboard</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+            <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Profile Sidebar -->
+        <div class="profile-sidebar">
+            <img src="d.avif" alt="Profile">
+            <h2>Hello, I'm <span class="highlight">Patrycja</span></h2>
+            <p>Excited to learn new things every day!</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-section">
+            <h1 class="title">Student Profile</h1>
+            <p class="subtitle">I'm a student</p>
+
+            <div class="details">
+                <h2>Details</h2>
+                <p><strong>User ID:</strong> 123</p>
+                <p><strong>Email:</strong> student@example.com</p>
+                <p><strong>First Name:</strong> Patrycja</p>
+            </div>
+
+            <div class="about-me">
+                <h2>About Me</h2>
+                <p>Curious and always exploring new areas of interest.</p>
+            </div>
+
+            <!-- Learning History Section -->
+            <div class="history">
+                <h2>Learning History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject Learnt</th>
+                            <th>Tutor Name</th>
+                            <th>Date</th>
+                            <th>Review</th>
+                            <th>Tutor ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Math</td>
+                            <td>Mr. John</td>
+                            <td>2024-10-12</td>
+                            <td>Great teaching style!</td>
+                            <td>45</td>
+                        </tr>
+                        <!-- Add more rows dynamically if needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Leaderboard | EduConnect</title>
+    <link rel="stylesheet" href="abc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="home.js"></script>
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="green">Edu</span><span class="yellow">Connect</span>
+            </div>
+            <button class="close-sidebar" id="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <a href="home.html"><i class="fas fa-home"></i><span> Home</span></a>
+        <a href="find_tutor.htm"><i class="fas fa-book"></i><span> Find Tutor</span></a>
+        <a href="docUpload.html"><i class="fas fa-upload"></i><span> Upload Document</span></a>
+        <a href="notification.html"><i class="fas fa-bell"></i><span> Notifications</span></a>
+        <a href="profile.html"><i class="fas fa-user"></i><span> Profile</span></a>
+        <a href="msg.html"><i class="fas fa-envelope"></i><span> Contact Us</span></a>
+        <a href="learderboard.html" class="active"><i class="fas fa-trophy"></i><span> Leaderboard</span></a>
+        <a href="Loginpage.html" class="logout"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a>
+    </div>
+
+    <header>
+        <div class="logo">
+            <span class="green">Edu</span><span class="yellow">Connect</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="find_tutor.htm">Find Tutors</a></li>
+                <li><a href="docUpload.html">Document</a></li>
+                <li><a href="msg.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="learderboard.html">Leaderboard</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login" onclick="window.location.href='Loginpage.html'">Login</button>
+            <button class="signup" onclick="window.location.href='Loginpage.html'">Sign up for Free</button>
+        </div>
+    </header>
+
+    <div class="leaderboard-container">
+        <div class="leaderboard-section">
+            <h1 class="title">Teacher Leaderboard</h1>
+            <p class="subtitle">Top Rated Teachers</p>
+
+            <div class="leaderboard-filters">
+                <div class="search-box">
+                    <input type="text" placeholder="Search teachers...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-options">
+                    <select>
+                        <option value="">All Subjects</option>
+                        <!-- Add options dynamically if needed -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="leaderboard-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Teacher</th>
+                            <th>Subject</th>
+                            <th>Rating</th>
+                            <th>Reviews</th>
+                            <th>Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="rank">1</td>
+                            <td class="teacher-info">
+                                <img src="teacher1.jpg" alt="John Doe">
+                                <div>
+                                    <h3>John Doe</h3>
+                                    <p>PhD in Mathematics</p>
+                                </div>
+                            </td>
+                            <td>Mathematics</td>
+                            <td>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(4.5)</span>
+                                </div>
+                            </td>
+                            <td>120</td>
+                            <td>10 years</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">2</td>
+                            <td class="teacher-info">
+                                <img src="teacher2.jpg" alt="Jane Smith">
+                                <div>
+                                    <h3>Jane Smith</h3>
+                                    <p>MSc in Physics</p>
+                                </div>
+                            </td>
+                            <td>Physics</td>
+                            <td>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(5.0)</span>
+                                </div>
+                            </td>
+                            <td>98</td>
+                            <td>8 years</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">3</td>
+                            <td class="teacher-info">
+                                <img src="teacher3.jpg" alt="Emily Johnson">
+                                <div>
+                                    <h3>Emily Johnson</h3>
+                                    <p>MA in English Literature</p>
+                                </div>
+                            </td>
+                            <td>English</td>
+                            <td>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(5.0)</span>
+                                </div>
+                            </td>
+                            <td>150</td>
+                            <td>12 years</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="leaderboard.js"></script>
+</body>
+</html> 
